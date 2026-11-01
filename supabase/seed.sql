@@ -1,0 +1,28 @@
+-- Temel egzersiz kütüphanesi
+insert into exercises (slug, name_tr, name_en, category, primary_muscle, secondary_muscles, equipment, met) values
+  ('bench-press', 'Bench Press', 'Bench Press', 'strength', 'chest', '{triceps,shoulders}', 'barbell', 6.0),
+  ('incline-db-press', 'Eğimli Dumbbell Press', 'Incline Dumbbell Press', 'strength', 'chest', '{shoulders,triceps}', 'dumbbell', 6.0),
+  ('push-up', 'Şınav', 'Push-up', 'calisthenics', 'chest', '{triceps,shoulders,core}', null, 8.0),
+  ('dip', 'Dips', 'Dip', 'calisthenics', 'triceps', '{chest,shoulders}', 'parallel_bars', 8.0),
+  ('pull-up', 'Barfiks', 'Pull-up', 'calisthenics', 'back', '{biceps,forearms}', 'pull_up_bar', 8.0),
+  ('barbell-row', 'Barbell Row', 'Barbell Row', 'strength', 'back', '{biceps,forearms}', 'barbell', 6.0),
+  ('lat-pulldown', 'Lat Pulldown', 'Lat Pulldown', 'strength', 'back', '{biceps}', 'cable', 5.0),
+  ('deadlift', 'Deadlift', 'Deadlift', 'strength', 'hamstrings', '{glutes,back,forearms,core}', 'barbell', 6.0),
+  ('squat', 'Squat', 'Back Squat', 'strength', 'quads', '{glutes,hamstrings,core}', 'barbell', 6.0),
+  ('leg-press', 'Leg Press', 'Leg Press', 'strength', 'quads', '{glutes}', 'machine', 5.0),
+  ('romanian-deadlift', 'Romanian Deadlift', 'Romanian Deadlift', 'strength', 'hamstrings', '{glutes,back}', 'barbell', 6.0),
+  ('lunge', 'Lunge', 'Lunge', 'strength', 'quads', '{glutes,hamstrings}', 'dumbbell', 5.0),
+  ('calf-raise', 'Calf Raise', 'Calf Raise', 'strength', 'calves', '{}', 'machine', 4.0),
+  ('overhead-press', 'Overhead Press', 'Overhead Press', 'strength', 'shoulders', '{triceps,core}', 'barbell', 6.0),
+  ('lateral-raise', 'Yana Açış', 'Lateral Raise', 'strength', 'shoulders', '{}', 'dumbbell', 4.0),
+  ('biceps-curl', 'Biceps Curl', 'Biceps Curl', 'strength', 'biceps', '{forearms}', 'dumbbell', 4.0),
+  ('triceps-pushdown', 'Triceps Pushdown', 'Triceps Pushdown', 'strength', 'triceps', '{}', 'cable', 4.0),
+  ('plank', 'Plank', 'Plank', 'calisthenics', 'core', '{shoulders}', null, 4.0),
+  ('hanging-leg-raise', 'Asılı Bacak Kaldırma', 'Hanging Leg Raise', 'calisthenics', 'core', '{forearms}', 'pull_up_bar', 5.0),
+  ('muscle-up', 'Muscle-up', 'Muscle-up', 'calisthenics', 'back', '{chest,triceps,core}', 'pull_up_bar', 8.0),
+  ('pistol-squat', 'Pistol Squat', 'Pistol Squat', 'calisthenics', 'quads', '{glutes,core}', null, 7.0),
+  ('running', 'Koşu', 'Running', 'cardio', 'cardio', '{quads,calves}', null, 9.8),
+  ('cycling', 'Bisiklet', 'Cycling', 'cardio', 'cardio', '{quads}', 'bike', 7.5),
+  ('rowing', 'Kürek Makinesi', 'Rowing Machine', 'cardio', 'cardio', '{back,quads}', 'machine', 7.0),
+  ('jump-rope', 'İp Atlama', 'Jump Rope', 'cardio', 'cardio', '{calves}', 'rope', 11.0)
+on conflict (slug) do nothing;
